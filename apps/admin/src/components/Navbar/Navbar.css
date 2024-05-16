@@ -1,0 +1,57 @@
+.search-input {
+    width: 100%;
+    height: 100%;
+    outline: none !important;
+    margin-left: 0.5rem;
+    background-color: transparent;
+  }
+  
+  .notifContainer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 102px;
+    bottom: 0;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .notifMain {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .notificationsDiv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    min-width: 353px;
+    padding-top: 16px;
+    box-shadow: inset 0px 12px 12px -8px rgba(0, 0, 0, 0.15);
+    max-height: calc(100vh - 250px);
+    overflow-y: auto;
+    z-index: 1;
+  }
+  
+  .notificationsDiv::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .notificationsDiv::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+  
+  .notificationsDiv::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  

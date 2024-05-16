@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* style for main grid layout (below navbar)  */
+.mainGrid {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 276px auto;
+  gap: 2rem;
+}
+
+body {
+ background-color: #FAFFFF; 
+}
+
+/* text classes */
+.text-14 {
+  @apply font-sans font-normal text-sm leading-[21px];
+}
+
+.text-16 {
+  @apply font-sans font-medium text-base leading-[24px];  
+}
+
+.text-20 {
+  @apply font-sans font-normal text-xl leading-[30px];
+}
+
+/* for custom box shadow */
+.boxShadow {
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.15);
+}
+
+.customSelect {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("/assets/icons/angleDown.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 20px;
+}
+
+.customSelect::-ms-expand {
+  display: none;
+}
+
+/* style for custom scrollbar in branches section in admin dashboard */
+
+.branchContainer::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+}
+
+.branchContainer::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.branchContainer::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.branchHover:hover {
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.15);
+}
+
+.eventsContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.eventsContainer::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.eventsContainer::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* style for All calsses tab in Pricipal */
+.allClassesGrid {
+  margin: 0 auto;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  gap: 24px;
+}
+
+.allClassTab {
+  padding: 0 8px 8px;
+}
+.allClassTab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #10A0B6;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+/* style for small navigation tabs in prinicpal screen */
+.activeNavTab::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #10A0B6;
+  border-radius: 2px;
+}
+
+/* style for custom placeholder */
+.placeholderMain {
+  height: 205px;
+  overflow: hidden;
+  position: relative;
+  animation-duration: 1.7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: bgAnimation;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eee 2%, #ddd 18%, #eee 33%);
+  background-size: 400% 100% !important;
+}
+
+.graphPlaceholder {
+  background: linear-gradient(-45deg, #f2f2f5 25%, #e5e5ea 37%, #f2f2f5 63%);
+  background-size: 400% 100% !important;
+  animation: graphAnimation 1.5s ease infinite;
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
+
+@keyframes graphAnimation {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* style for react-internation-phone input */
+.phoneInputDiv > .react-international-phone-input-container {
+  display: flex;
+  align-items: center !important;
+  border: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 2px;
+}
+
+.phoneInputDiv > .react-international-phone-input-container > .react-international-phone-input {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 21px !important;
+  width: 100% !important;
+  border: none !important;
+  background-color: #fff !important;
+  color: #989898 !important;
+}
+
+
+/* style for subject assignment box in Edit teachers form  */
+.customCheckbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.customCheckbox .customCheckmark {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+.assignedSubjectsDiv::-webkit-scrollbar {
+  height: 4px;
+}
+
+.assignedSubjectsDiv::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.assignedSubjectsDiv::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+
+/* style for selectFilter in view/pricipal */
+.selectFilter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('/assets/icons/angleDown.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 20px;
+}
+
+/* Optional: Style the dropdown list */
+.selectFilter::-ms-expand {
+  display: none;
+}
+
+.principalCardContainer {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  column-gap: 36px;
+  row-gap: 14px;
+}
+
+.principalsDiv::-webkit-scrollbar {
+  width: 5px;
+}
+
+.principalsDiv::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.principalsDiv::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.customScrollBar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.customScrollBar::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.customScrollBar::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+.customScrollBar::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* for attendance details calendar */
+.attendancePresent {
+  color: #42AE18;
+}
+
+.attendanceAbsent {
+  color: #D74726;
+}
